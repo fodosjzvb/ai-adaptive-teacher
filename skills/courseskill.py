@@ -68,5 +68,5 @@ class CourseSearchSkill:
             "estimated_time": "20 minutes"
         }}
         """
-
-        return self.llm.generate(prompt, json_mode=True)
+        "test json_mode"
+        return self.llm.generate(prompt)
