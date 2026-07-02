@@ -61,4 +61,4 @@ class ExerciseGeneratorSkill:
         }}
         """
 
-        return self.llm.generate(prompt, json_mode=True)
+        return self.llm.generate(prompt)

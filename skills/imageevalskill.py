@@ -56,7 +56,7 @@ Return ONLY JSON matching this format:
 }}
 """
 
-        raw_response = self.llm.generate([image_part, prompt], json_mode=True)
+        raw_response = self.llm.generate([image_part, prompt])
         try:
             return json.loads(raw_response)
         except Exception:

@@ -49,7 +49,7 @@ Return ONLY JSON matching this format:
 }}
 """
 
-        raw_response = self.llm.generate(prompt, json_mode=True)
+        raw_response = self.llm.generate(prompt)
         try:
             return json.loads(raw_response)
         except Exception:
