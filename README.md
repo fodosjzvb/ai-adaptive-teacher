@@ -27,7 +27,7 @@ This allows the tutor to dynamically adapt to user inputs and learning behavior.
 
 1. installation & Setup
 Clone the repository
-git clone https://github.com/YOUR_USERNAME/ai-adaptive-teacher.git
+git clone https://github.com/fodosjzvb/ai-adaptive-teacher.git
 cd ai-adaptive-teacher
 
 3. Install dependencies
