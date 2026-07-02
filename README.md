@@ -34,12 +34,14 @@ cd ai-adaptive-teacher
 pip install -r requirements.txt
 
 API Key Configuration
-This project requires an LLM API key.
-You can configure it in one of the following ways:
+This project requires an GEMINI LLM API key to run.
+You can provide it in two ways:
 
-Option 1 — In-app input
-The API key is stored in session state:
-st.session_state.api_key = "YOUR_API_KEY"
+Option 1 — Streamlit Secrets
+Create a folder named: .streamlit
+Inside it, create a file called: secrets.toml
+Then add in the file: API_KEY = "YOUR_API_KEY"
+Replace YOUR_API_KEY with your actual Gemini API key.
 
 Option 2 — Direct input in the app
 You can also enter your API key directly in the application interface.
