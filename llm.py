@@ -6,7 +6,7 @@ class GeminiLLM:
 
     def generate(self, prompt):
         response = self.client.models.generate_content(
-            model="gemini-3.5-flash",
+            model="gemini-1.5-pro",
             contents=prompt
         )
         return response.text
