@@ -119,7 +119,8 @@ def safe_json_loads(text):
 
 # Initialize session state variables
 if "api_key" not in st.session_state:
-    st.session_state.api_key = "YOUR_API_KEY"
+    st.session_state.api_key = st.secrets.get("API_KEY", "")
+    #st.session_state.api_key = "YOUR_API_KEY"
 if "learning_path" not in st.session_state:
     st.session_state.learning_path = None
 if "current_topic_index" not in st.session_state:
@@ -250,7 +251,7 @@ with st.sidebar:
     st.session_state.difficulty_level = difficulty_level
 
     # Optional Custom API Key input
-    api_key_input = st.text_input("Gemini API Key (Optional)", value=st.session_state.api_key, type="password")
+    api_key_input = st.text_input("Gemini API Key (Optional - use your own if server key fails)", type="password")
     if api_key_input.strip():
         st.session_state.api_key = api_key_input.strip()
 
