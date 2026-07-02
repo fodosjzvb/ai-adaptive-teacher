@@ -51,7 +51,7 @@ streamlit run app.py
 
 Live Demo
 If deployed on Streamlit Cloud:
-https://YOUR-STREAMLIT-APP-LINK
+[https://YOUR-STREAMLIT-APP-LINK](https://ai-adaptive-teacher-d5ahaxkuuygynx9isxcmey.streamlit.app/)
 
 Technologies Used
 Python
