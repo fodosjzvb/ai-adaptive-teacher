@@ -1,4 +1,4 @@
-import google.genai as genai
+import google.generativeai as genai
 
 class GeminiLLM:
     def __init__(self, api_key):
