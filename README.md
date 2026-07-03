@@ -8,6 +8,7 @@ Overview
 Users can ask questions on any subject, and the system generates a structured learning path adapted to their level.
 The AI continuously adjusts the content based on user performance, ensuring an efficient and personalized learning experience.
 To reinforce understanding, the system provides targeted exercises and feedback, helping users progress step by step without getting stuck.
+The application includes a lightweight session-based user system that allows users to store and retrieve their learning progress across sessions.
 
 Key Features
 - Multi-agent architecture for specialized reasoning and task handling
@@ -16,6 +17,7 @@ Key Features
 - Feedback-driven evaluation system for continuous improvement
 - Tool-based architecture for modular and extensible design
 - Streamlit cloud deployment for easy access (if deployed)
+- A small session design
 
 Architecture
 The system is built around a modular multi-agent design with:
