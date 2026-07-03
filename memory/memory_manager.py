@@ -4,8 +4,8 @@ import os
 #debug
 class MemoryManager:
 
-    def __init__(self, filename="memory/user_memory.json"):
-        self.filename = filename
+    def __init__(self, user_id):
+        self.filename = f"memory/{user_id}.json"
 
     def load(self):
         if not os.path.exists(self.filename):
