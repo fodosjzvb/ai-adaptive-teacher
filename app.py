@@ -20,6 +20,7 @@ from skills.texteevalskill import TextValidationSkill
 from skills.imageevalskill import ImageValidationSkill
 from memory.memory_manager import MemoryManager
 from tools.filetypetool import type_file_checking
+#debug
 
 # Set page configurations
 st.set_page_config(

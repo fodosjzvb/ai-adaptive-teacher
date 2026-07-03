@@ -1,7 +1,7 @@
 import json
 import os
 
-
+#debug
 class MemoryManager:
 
     def __init__(self, filename="memory/user_memory.json"):
