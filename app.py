@@ -30,6 +30,23 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+if "user_id" not in st.session_state:
+    st.session_state.user_id = None
+
+if st.session_state.user_id is None:
+    st.title("🎓 Welcome to AI Personal Tutor")
+
+    email = st.text_input("Enter your email")
+
+    if st.button("Continue"):
+        if email.strip():
+            st.session_state.user_id = email.strip().lower()
+            st.rerun()
+        else:
+            st.error("Please enter an email address.")
+
+    st.stop()
+
 # Custom premium styling
 st.markdown("""
 <style>
@@ -142,7 +159,7 @@ if "memory_loaded" not in st.session_state:
     st.session_state.memory_loaded = False
 
 
-memory = MemoryManager()
+memory = MemoryManager(st.session_state.user_id)
 
 def _int_keys(d):
     """Convert string keys (from JSON) back to integer keys used at runtime."""
@@ -314,6 +331,11 @@ with st.sidebar:
             st.rerun()
         st.markdown("---")
 
+    if st.button("🚪 Logout"):
+        st.session_state.user_id = None
+        st.session_state.memory_loaded = False
+        st.rerun()
+    
     # Dashboard / Stats
     if st.session_state.learning_path:
         st.markdown(f"### 🔥 Streak: **{st.session_state.streak} Days**")
